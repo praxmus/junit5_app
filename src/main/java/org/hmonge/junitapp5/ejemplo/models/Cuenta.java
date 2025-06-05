@@ -5,8 +5,10 @@ import org.hmonge.junitapp5.ejemplo.exceptions.DineroInsuficienteException;
 import java.math.BigDecimal;
 
 public class Cuenta {
+
     private String persona;
     private BigDecimal saldo;
+    private Banco banco;
 
     public Cuenta() {
     }
@@ -24,12 +26,20 @@ public class Cuenta {
         this.saldo = saldo;
     }
 
+    public void setBanco(Banco banco) {
+        this.banco = banco;
+    }
+
     public String getPersona() {
         return persona;
     }
 
     public BigDecimal getSaldo() {
         return saldo;
+    }
+
+    public Banco getBanco() {
+        return banco;
     }
 
     public void debito(BigDecimal monto){
